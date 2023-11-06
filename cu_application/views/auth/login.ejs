@@ -1,0 +1,89 @@
+<% layout('layouts') -%>
+
+<% block('head', "
+    <style>
+        html, body{
+            background-image: url("for project 3.jpg");
+            padding-top: 0;
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+    <script src="<%- url_for(static jquery.js page.path) %>"></script>
+    <script src="<%- url_for(static respond.min.js page.path) %>"></script>
+    <script src="<%- url_for(static html5shiv.js page.path) %>"></script>
+")-%>
+
+<% block('title', "
+    Login
+")-%>
+
+<% block('body', "
+    <p>
+        <%=failurer%>
+    </p>
+	<div class="row" style="padding-bottom: 10.5%; height:100%; background-color:rgba(131, 132, 136, 0.68);" wfd-id="0">
+		<div class="col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4 col-sm-offset-3 col-sm-6 col-xs-offset-2 col-xs-8 " style="  height:50%; margin-top: 10%; margin-bottom: auto;" wfd-id="1">
+			<div wfd-id="2">
+				<section class="panel" wfd-id="3">
+					<header class="panel-heading" style="text-align: center; background-color: white;">
+						<img style=" display: block; margin-right: auto; margin-left: auto; width: 100px;" src="static/src/logo.png" alt="CU_LOGO">
+					</header>
+					<div class="panel-body" wfd-id="4">
+						<form class="form-horizontal" role="form" method="post" id="login" wfd-id="6">
+															<div class="form-group" wfd-id="11">
+								<!-- <label for="userid" class="col-lg-2 col-sm-2 control-label">Mat No</label>-->
+								<div class="col-lg-12" wfd-id="12">
+									<input type="text" class="form-control" id="userid" name="user_id" placeholder="User Name" required="" wfd-id="15">
+									<p class="help-block" style="text-align: center;">USER  :  Input Username</p>
+								<kpm-button class="_1mUok1yqu_fHkbNOXVoU6l kpm_input-field-button kpm_gray-key-icon" style="z-index: 3 !important;"><div class="_12GLdmNfqjBzgAQBymfRrk" wfd-id="17" style="width: 20px !important; height: 24px !important; top: -64px !important; left: 379.328px !important;"><svg class="_1jZ1QRhwRIXZDO2Rgp_qon" viewBox="25 25 50 50" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" style="inset: 0px -2px !important;"><circle cx="50" cy="50" r="20"></circle></svg></div><svg class="_2WQbmZpFI_2_k72D9o87Hq kpm_reset _2p2h7gYS-bpObPoQxR7lvo" width="12" height="24" viewBox="0 0 8 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="width: 12px !important; height: 24px !important; top: -64px !important; left: 379.328px !important;"><path fill-rule="evenodd" clip-rule="evenodd" d="M6 7.46487C7.1956 6.77325 8 5.48056 8 4C8 1.79086 6.20914 0 4 0C1.79086 0 0 1.79086 0 4C0 5.48056 0.804397 6.77325 2 7.46487V9H3V10H2V12H3V13H2V14.5L4 16L6 14.5V7.46487ZM5 3C5 3.55228 4.55229 4 4 4C3.44772 4 3 3.55228 3 3C3 2.44772 3.44772 2 4 2C4.55229 2 5 2.44772 5 3ZM4 8H5V14H4V8Z"></path></svg></kpm-button></div>
+							</div>
+							<div class="form-group" wfd-id="9">
+								<!--<label for="inputpassword1" class="col-lg-2 col-sm-2 control-label">Password</label>-->
+								<div class="col-lg-12" wfd-id="10">
+									<input type="password" class="form-control" id="inputpassword1" name="inputpassword1" placeholder="Password" required="" wfd-id="14">
+									<p class="help-block" style="text-align: center;">Remember  :  Passwords are CASE SENSITIVE</p>
+								<kpm-button class="_1mUok1yqu_fHkbNOXVoU6l kpm_input-field-button kpm_gray-key-icon" style="z-index: 3 !important;"><div class="_12GLdmNfqjBzgAQBymfRrk" wfd-id="16" style="width: 20px !important; height: 24px !important; top: -64px !important; left: 379.328px !important;"><svg class="_1jZ1QRhwRIXZDO2Rgp_qon" viewBox="25 25 50 50" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" style="inset: 0px -2px !important;"><circle cx="50" cy="50" r="20"></circle></svg></div><svg class="_2WQbmZpFI_2_k72D9o87Hq kpm_reset _2p2h7gYS-bpObPoQxR7lvo" width="12" height="24" viewBox="0 0 8 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="width: 12px !important; height: 24px !important; top: -64px !important; left: 379.328px !important;"><path fill-rule="evenodd" clip-rule="evenodd" d="M6 7.46487C7.1956 6.77325 8 5.48056 8 4C8 1.79086 6.20914 0 4 0C1.79086 0 0 1.79086 0 4C0 5.48056 0.804397 6.77325 2 7.46487V9H3V10H2V12H3V13H2V14.5L4 16L6 14.5V7.46487ZM5 3C5 3.55228 4.55229 4 4 4C3.44772 4 3 3.55228 3 3C3 2.44772 3.44772 2 4 2C4.55229 2 5 2.44772 5 3ZM4 8H5V14H4V8Z"></path></svg></kpm-button></div>
+							</div>
+							<div class="form-group" wfd-id="7">
+								<div class="col-lg-12" wfd-id="8">
+									<input type="submit" style="width: 100%; background-color:#d5d5d5; color:#808080" class="btn btn-danger" value="Sign In" name="signin" id="signin" wfd-id="13">
+									<a href="portfolio-html-site-master\inside.html" target="_self">
+									</a>
+								</div>
+							</div>
+						</form>
+						<div class="error" style="color: red" wfd-id="5">
+							<p style="color: red"><a href="https://cuportal.covenantuniversity.edu.ng/pwordreset.php">Forgot Password?</a>
+							</p>
+							 <span class="txt1"> Don’t have an account?
+							 </span>
+								   <a href="<%- url_for(static style.css register) %>" target="_blank"><!--{url_for('register')}-->
+												  Sign up
+								   </a>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div> 
+
+<script>mendeleyWebImporter = {
+downloadPdfs(t,e) { return this._call('downloadPdfs', [t,e]); },
+open() { return this._call('open', []); },
+_call(methodName, methodArgs) {
+const id = Math.random();
+window.postMessage({ id, token: '0.5615730184799332', methodName, methodArgs }, 'https://cuportal.covenantuniversity.edu.ng');
+return new Promise(resolve => {
+  const listener = window.addEventListener('message', event => {
+	const data = event.data;
+	if (typeof data !== 'object' || !('result' in data) || data.id !== id) return;
+	window.removeEventListener('message', listener);
+	resolve(data.result);
+  });
+});
+}
+};</script>
+")-%>

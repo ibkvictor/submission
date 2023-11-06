@@ -1,0 +1,38 @@
+<% layout('layouts') -%>
+
+<% block('title', "
+    Register
+")-%>
+
+<% block('body', "
+    <% block('success', "
+        <div class ="login-failure">
+            <p>Your username or password is incorrect !</p>
+        </div>
+    ")-%>
+    <form action="" method="post" class="form-example">
+        <div class="form-register">
+        <label for="name">Name: </label>
+        <input type="text" name="name" id="name" required>
+        </div>
+        <div class="form-register">
+        <label for="name">College: </label>
+        <input type="text" name="college" id="college" required>
+        </div>
+        <div class="form-register">
+        <label for="department">Department: </label>
+        <input type="text" name="department" id="department" required>
+        </div>
+        <div class="form-register">
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email" required>
+        </div>
+        <div class="form-register">
+        <label for="userPassword">Password: </label>
+        <input hidden required id="" type="password" value="passowrd">
+        </div>
+        <div class="form-register">
+        <input required type="submit" value="Subscribe!" minlength="4" maxlength="8">
+        </div>
+    </form>
+")-%>

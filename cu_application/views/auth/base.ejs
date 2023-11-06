@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=blocks.title%></title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta name="description" content="Covenant portal,Covenant portal login page, login page, covenant university portal login page, covenant university">
+    <!-- bootstrap 3.0.2 -->
+    <link rel="stylesheet" href="<%- url_for(static bootstrap.min.css page.path) %>">
+    <link rel="stylesheet" href="<%- url_for(static font-awesome.min.css page.path) %>">
+    <link rel="stylesheet" href="<%- url_for(static extra.css page.path) %>">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="<%- url_for(static style.css page.path) %>">
+    <link rel="icon" type="image/png" href="<%- url_for(static style.css ../../src/logo.png) %>">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]-->
+    <!--[endif]-->
+    <!-- body {
+        background-image: url("paper.gif");
+        background-color: #cccccc;
+    } -->
+    <style>
+        html, body{
+            background-image: url("for project 3.jpg");
+            padding-top: 0;
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+    <script src="<%- url_for(static jquery.js page.path) %>"></script>
+    <script src="<%- url_for(static respond.min.js page.path) %>"></script>
+    <script src="<%- url_for(static html5shiv.js page.path) %>"></script>
+</head>
+<body>
+    <%-partial('../partials/topNavigation')%>
+ 
+    <h1><%=blocks.body%></h1>
+ 
+    <%-body -%>
+</body>
+</html>
+
+
+<% layout('layout/page') -%>
+
+<% block('title', 'Hello ≥︺‿︺≤'); -%>
+
+
+<p class="lead">Hey all!</p>
+
+
+
+
+
+
+
+
+
+<!-- ------------------------- -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    {% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<meta name="description" content="Covenant portal,Covenant portal login page, login page, covenant university portal login page, covenant university">
+	<!-- bootstrap 3.0.2 -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+	<!-- font Awesome -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='font-awesome.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='extra.css') }}">
+	<!-- Theme style -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+	<link rel="icon" type="image/png" href="../static/src/logo.png">
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]-->
+	<!--[endif]-->
+	<!-- body {
+	background-image: url("paper.gif");
+	background-color: #cccccc;
+	}-->
+	<!--     Fonts and icons     -->
+	<link href= "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+	<!-- Nucleo Icons -->
+	<link href= "{{ url_for('static', filename='/assets/css/nucleo-icons.css') }}" rel="stylesheet" />
+	<link href= "{{ url_for('static', filename='/assets/css/nucleo-svg.css') }}" rel="stylesheet" />
+	<!-- Font Awesome Icons -->
+	<script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+	<link href= "{{ url_for('static', filename='/assets/css/nucleo-svg.css') }}" rel="stylesheet" />
+	<!-- CSS Files -->
+	<link id="pagestyle" href="../static/assets/css/soft-ui-dashboard.css?v=1.0.3" rel="stylesheet" />
+    {% endblock %}
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+</head>
+{% block body %}
+<body class="skin-black" style="margin: auto; ">
+
+</body>
+{% endblock %}
+</html>

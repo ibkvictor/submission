@@ -1,0 +1,6 @@
+<select id="years" name="years" class="custom-select" >
+    <option disabled selected value> -- select year -- </option>
+    <% for (const year of years) { %>
+    <option value="<%= year %>"><%= year %></option>
+    <% }); %>
+</select>

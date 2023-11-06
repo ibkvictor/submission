@@ -1,0 +1,90 @@
+<thead>
+    <tr>
+        <% for (const h of headers) { %>
+      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"><%=h%></th>
+        <% }); %>
+  </tr>
+</thead>
+<tbody>
+    <% for (const item of applicants_list) { %>
+    <!-- <% artworks.forEach((item) => { %> -->
+        <tr>
+            <td>
+                <div class="d-flex px-2 py-1">
+                <div class="d-flex flex-column justify-content-center">
+                    <h6 class="mb-0 text-sm"><%= i.NAME %></h6>
+                </div>
+                </div>
+            </td>
+            <td>
+                <div class="d-flex px-2 py-1">
+                <div class="d-flex flex-column justify-content-center">
+                    <h6 class="mb-0 text-sm"><%= item.USERNAME %></h6>
+                </div>
+                </div>
+            </td>
+            <td>
+                <div class="d-flex px-2 py-1">
+                    <div class="d-flex flex-column justify-content-center">
+                    <h6 class="mb-0 text-sm"><%= item.COLLEGE %></h6>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="d-flex px-2 py-1">
+                    <div class="d-flex flex-column justify-content-center">
+                    <h6 class="mb-0 text-sm"><%= item.DEPARTMENT %></h6>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="d-flex px-2 py-1">
+                    <div class="d-flex flex-column justify-content-center">
+                    <h6 class="mb-0 text-sm"><%= item.EMAIL %></h6>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="d-flex px-2 py-1">
+                    <div class="d-flex flex-column justify-content-center">
+                    <h6 class="mb-0 text-sm"><%= item.SUMISSION_STATUS %></h6>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="d-flex px-2 py-1">
+                    <div class="d-flex flex-column justify-content-center">
+                    <h6 class="mb-0 text-sm"><%= item.SCORE %></h6>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    <% }); %>
+</tbody>
+
+<!-- <h1 class="sidebar-title">Artwork on display</h1>
+<p class="sidebar-body">While you attend the conference, head over to our gallery where you can
+  check out some of the work from our speakers.</p>
+<div class="pixgrid clearfix">
+  <% artworks.forEach((artwork, key) => { %>
+    <img src="/images/artwork/<%= artwork %>" alt="Artwork <%= key %>">
+  <% }); %> -->
+
+<!-- {% for i in applicants_list %}
+<tr>
+<td>
+    <div class="d-flex px-2 py-1">
+    <div class="d-flex flex-column justify-content-center">
+        <h6 class="mb-0 text-sm">{{i.NAME}}</h6>
+    </div>
+    </div>
+</td>
+<td>
+    <div class="d-flex px-2 py-1">
+    <div class="d-flex flex-column justify-content-center">
+        <h6 class="mb-0 text-sm">{{i.USERNAME}}</h6>
+    </div>
+    </div>
+</td>
+</tr>
+{% endfor %} -->

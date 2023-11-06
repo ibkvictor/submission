@@ -1,0 +1,41 @@
+<% layout('login') -%>
+
+<% block('title', "
+    Register
+")-%>
+
+<% block('body', "
+    <form action="" method="POST" class="form-example">
+        <div class="form-register">
+        <label for="name">Name: </label>
+        <input type="text" name="name" id="name" required>
+        </div>
+        <div class="form-register">
+        <label for="name">Username: </label>
+        <input type="text" name="username" id="username" required>
+        </div>
+        <div class="form-register">
+        <label for="name">College: </label>
+        <input type="text" name="college" id="college" required>
+        </div>
+        <div class="form-register">
+        <label for="department">Department: </label>
+        <input type="text" name="department" id="department" required>
+        </div>
+        <div class="form-register">
+        <label for="photograph">photograph</label>
+        <input type="file" name="photograph" id="photograph" required>
+        </div>
+        <div class="form-register">
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email" required>
+        </div>
+        <div class="form-register">
+        <label for="userPassword">Password: </label>
+        <input required id="" type="password" name="password" value="passowrd">
+        </div>
+        <div class="form-register">
+        <input required type="submit" value="Register" minlength="4" maxlength="8">
+        </div>
+    </form>
+") -%>
