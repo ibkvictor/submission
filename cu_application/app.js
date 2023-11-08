@@ -18,32 +18,11 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
 // -------- importing local routers ----------------
-var auth_router = require("/Users/victorezekiel/cu_application/controllers/auth_route.js")
-var dashboard_router = require("/Users/victorezekiel/cu_application/controllers/dashboard_route.js")
-var index_router = require("/Users/victorezekiel/cu_application/controllers/index.js")
+var auth_router = require("/Users/victorezekiel/cu_application/routes/auth_route.js")
+var dashboard_router = require("/Users/victorezekiel/cu_application/routes/dashboard_route.js")
+var index_router = require("/Users/victorezekiel/cu_application/routes/index.js")
 
 // -------- using routes ----------------
 app.use("/", index_router);
+app.use("/login", auth_router);
 app.use("/dashboard", dashboard_router);
-app.use("/auth", auth_router);
-
-
-@app.route("/", methods = ["POST", "GET"])
-@app.route("/login", methods = ["POST", "GET"])
-
-@app.route("/auth/register", methods=["POST", "GET"])
-
-@app.route("/dashboard/<username>")
-
-
-@app.route("/settings/<username>", methods = ["POST", "GET"])
-
-@app.route("/apply/<username>", methods = ["POST", "GET"])
-
-@app.route("/dashboard_admin/<username>")
-
-@app.route("/dashboard/assess/<username>")
-
-@app.route("/dashboard/cant_assess")
-
-@app.route("/dashboard/admin_assess/<username>")
