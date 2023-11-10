@@ -1,4 +1,5 @@
-const app = require("express");
+const express = require("express");
+const app = express();
 const sqlite3 = require("sqlite3");
 const spawn = require("child_process").spawn;
 var fs = require("fs")
@@ -8,7 +9,7 @@ const { read } = require("graceful-fs");
 const path = require("path");
 
 // ---- data base connection ----
-const db_name = path.join(__dirname, "data", "test.db");
+const db_name = "/Users/victorezekiel/cu_application/data/test.db";
 
 const db = new sqlite3.Database(db_name, (err) => {
 	if (err) {
@@ -19,6 +20,8 @@ const db = new sqlite3.Database(db_name, (err) => {
 });
 
 // -------- utilities ----------
+app.set("view engine", "ejs");
+
 // ---- hashPassword ----
 async function hashPassword (password) {
     const saltRounds = 10;

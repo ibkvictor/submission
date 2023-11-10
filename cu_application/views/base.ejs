@@ -50,19 +50,19 @@
 <html lang="en">
   <head>
     <meta name="viewport" content="initial-scale=1, width=device-width">
-    <title><%=who%></title>
-    <%-scripts%>
-    <%-stylesheets%>
+    <title><%= who %></title>
+    <%- scripts %>
+    <%- stylesheets %>
   </head>
   <body class="skin-black" style="margin: auto; ">
     <header>
-      <%-blocks.header%>
+      <%- blocks.header %>
     </header>
     <section>
-      <%-body -%>
+      <%- body %>
     </section>
     <footer>
-      <%-blocks.footer%>
+      <%- blocks.footer %>
     </footer>
   </body>
 </html>

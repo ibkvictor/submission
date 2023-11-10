@@ -1,10 +1,10 @@
-<% layout('login') -%>
+<% layout('login')%>
 
 <% block('title', "
     Register
-")-%>
+")%>
 
-<% block('body', "
+<%- block('body', "
     <form action="" method="POST" class="form-example">
         <div class="form-register">
         <label for="name">Name: </label>
@@ -38,4 +38,4 @@
         <input required type="submit" value="Register" minlength="4" maxlength="8">
         </div>
     </form>
-") -%>
+")%>

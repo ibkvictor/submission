@@ -1,9 +1,11 @@
+const express = require("express");
+const app = express();
 const bcrypt = require("bcrypt");
 const sqlite3 = require("sqlite3");
 const path = require("path");
 
 // ---- data base connection ---- 
-const db_name = path.join(__dirname, "data", "test.db");
+const db_name = "/Users/victorezekiel/cu_application/data/test.db";
 
 const db = new sqlite3.Database(db_name, (err) => {
 	if (err) {
@@ -12,6 +14,9 @@ const db = new sqlite3.Database(db_name, (err) => {
 	}
 	console.log("Successful connection to the database 'app.test.db'");
 });
+
+// ----- configurations -------
+app.set("view engine", "ejs");
 
 // ---- validate username ---- 
 function validateUser(username){
